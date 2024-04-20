@@ -35,7 +35,7 @@
 ----------------------- */
 body {
   font-family: 'Libre Franklin', sans-serif;
-  background: #111922;
+  background: #ffffff;
 }
 h1 {
   font-weight: 900;
@@ -122,13 +122,23 @@ h1 {
           <label for="surname">Brand_Name</label>
           <input class="form-control" type="text" name="brand_name"/>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="name">Color</label>
             <input class="form-control" type="text" name="color"/>
+          </div> -->
+          <div class="checkbox-group" style="margin-bottom: 10px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold; color:white;">Colors</label>
+            <input type="checkbox" name="colors" value="Black" style="color: white;"> Black
+            <input type="checkbox" name="colors" value="White" style="background-color: white;"> White
+            <input type="checkbox" name="colors" value="Gray" style="background-color: white;"> Gray
           </div>
-          <div class="form-group">
-            <label for="surname">Size</label>
-            <input class="form-control" type="text" name="size"/>
+
+          <div class="checkbox-group" style="margin-bottom: 10px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold; color:white;">Sizes</label>
+            <input type="checkbox" name="sizes" value="Small" style="background-color: white;"> Small
+            <input type="checkbox" name="sizes" value="Medium" style="background-color: white;"> Medium
+            <input type="checkbox" name="sizes" value="Large" style="background-color: white;"> Large
+            <input type="checkbox" name="sizes" value="ExtraLarge" style="background-color: white;"> Extra Large
           </div>
           <div class="form-group">
             <label for="surname">Price</label>
@@ -163,7 +173,7 @@ $(() => {
 //# sourceURL=pen.js
     </script>
 
-  
+
 </body>
 
 </html>

@@ -74,7 +74,7 @@ body{
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 .wsk-cp-text{
-  padding-top:150%;
+  padding-top:115%;
 }
 .wsk-cp-text .category{
   text-align:center;
@@ -267,9 +267,17 @@ a.buy-btn{
               <h3>{{ item.product_name }}</h3>
             </div>
             <div class="description-prod">
-              <p>{{ item.color }}</p>
+              <p>
+                {% for color in item.colors %}
+                  {{ color.name }}
+                {% endfor %}
+              </p>
             </div><div class="description-prod">
-              <p>{{ item.size }}</p>
+              <p>
+                {% for size in item.sizes %}
+                  {{ size.name }} 
+                {% endfor %}
+              </p>
             </div>
             <div class="card-footer">
               <div class="wcf-left"><span class="price">{{ item.price }}</span></div>
